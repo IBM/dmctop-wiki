@@ -5,10 +5,6 @@ const links = [
   {
     title: 'Db2 Product Hub',
     href: 'https://www.ibm.com/support/producthub/db2',
-  },
-  {
-    title: 'Github',
-    href: 'https://github.com/carbon-design-system/gatsby-theme-carbon',
   }
 ];
 
