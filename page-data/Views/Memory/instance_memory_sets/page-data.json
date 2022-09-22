@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-views-memory-instance-memory-sets-mdx",
-    "path": "/Views/Memory/instance_memory_sets/",
-    "result": {"pageContext":{"frontmatter":{"description":"Views / Memory / Instance Memory Sets","title":"Views / Memory / Instance Memory Sets"},"relativePagePath":"/Views/Memory/instance_memory_sets.mdx","titleType":"page","MdxNode":{"id":"a85f8e17-a6f1-50e1-bd73-81a93189832c","children":[],"parent":"60af6cf5-7368-59e9-bdd7-3e769a757e0c","internal":{"content":"","type":"Mdx","contentDigest":"ec7f9bb398363fb896ff3acf6c296645","owner":"gatsby-plugin-mdx","counter":112},"frontmatter":{"description":"Views / Memory / Instance Memory Sets","title":"Views / Memory / Instance Memory Sets"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/Memory/instance_memory_sets.mdx"}}},
-    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

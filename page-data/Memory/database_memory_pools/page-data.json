@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-memory-database-memory-pools-mdx",
+    "path": "/Memory/database_memory_pools/",
+    "result": {"pageContext":{"frontmatter":{"description":"Memory / Database Memory Pools","title":"Memory / Database Memory Pools"},"relativePagePath":"/Memory/database_memory_pools.mdx","titleType":"page","MdxNode":{"id":"0e97ad4d-8a66-5530-b729-6ec970d93217","children":[],"parent":"b9ff3ed5-c65f-52b2-82cf-3a5e794ddf35","internal":{"content":"","type":"Mdx","contentDigest":"4d2824db188e213d587f8c2a62066ce0","owner":"gatsby-plugin-mdx","counter":103},"frontmatter":{"description":"Memory / Database Memory Pools","title":"Memory / Database Memory Pools"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Memory/database_memory_pools.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

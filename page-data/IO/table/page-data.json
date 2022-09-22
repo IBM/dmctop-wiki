@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-io-table-mdx",
+    "path": "/IO/table/",
+    "result": {"pageContext":{"frontmatter":{"description":"IO / Table","title":"IO / Table"},"relativePagePath":"/IO/table.mdx","titleType":"page","MdxNode":{"id":"888d9fe7-acc3-575b-bef9-bba4489d58ad","children":[],"parent":"d6fc7f78-9012-5d4d-b5a9-9510d09d1b08","internal":{"content":"","type":"Mdx","contentDigest":"d6e0be1601942296ea890a87f1b588b8","owner":"gatsby-plugin-mdx","counter":102},"frontmatter":{"description":"IO / Table","title":"IO / Table"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/IO/table.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

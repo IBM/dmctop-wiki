@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-views-throughput-skew-monitor-mdx",
-    "path": "/Views/Throughput/skew_monitor/",
-    "result": {"pageContext":{"frontmatter":{"description":"Views / Throughput / Skew Monitor","title":"Views / Throughput / Skew Monitor"},"relativePagePath":"/Views/Throughput/skew_monitor.mdx","titleType":"page","MdxNode":{"id":"21f07484-9e76-5853-8077-67c98f9c913b","children":[],"parent":"c1970af4-3dd9-55bc-aa51-ff947c480b27","internal":{"content":"","type":"Mdx","contentDigest":"e7a70b5cbe6380ee4ac4c44d4e66980e","owner":"gatsby-plugin-mdx","counter":124},"frontmatter":{"description":"Views / Throughput / Skew Monitor","title":"Views / Throughput / Skew Monitor"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/Throughput/skew_monitor.mdx"}}},
-    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

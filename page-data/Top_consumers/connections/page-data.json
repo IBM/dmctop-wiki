@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-top-consumers-connections-mdx",
+    "path": "/Top_consumers/connections/",
+    "result": {"pageContext":{"frontmatter":{"description":"Top Consumers / Connections","title":"Top Consumers / Connections"},"relativePagePath":"/Top_consumers/connections.mdx","titleType":"page","MdxNode":{"id":"df3cf11d-8463-5c71-b533-0cd8494f6e24","children":[],"parent":"41485b0c-078e-522d-a8d2-8cde8275728b","internal":{"content":"","type":"Mdx","contentDigest":"c72d4c2cb79bc72943d99c2edd2cdcfa","owner":"gatsby-plugin-mdx","counter":127},"frontmatter":{"description":"Top Consumers / Connections","title":"Top Consumers / Connections"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Top_consumers/connections.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-other-utilities-mdx",
+    "path": "/Other/utilities/",
+    "result": {"pageContext":{"frontmatter":{"description":"Other / Utilities","title":"Other / Utilities"},"relativePagePath":"/Other/utilities.mdx","titleType":"page","MdxNode":{"id":"b8c98199-44e2-5b3c-bc51-a8f2c95bec68","children":[],"parent":"e914ceea-7c18-5a7d-821f-6cf8b1e90ca3","internal":{"content":"","type":"Mdx","contentDigest":"f0a0ea9395a5418125b567a2daae3d88","owner":"gatsby-plugin-mdx","counter":109},"frontmatter":{"description":"Other / Utilities","title":"Other / Utilities"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Other/utilities.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-views-io-table-mdx",
-    "path": "/Views/IO/table/",
-    "result": {"pageContext":{"frontmatter":{"description":"Views / IO / Table","title":"Views / IO / Table"},"relativePagePath":"/Views/IO/table.mdx","titleType":"page","MdxNode":{"id":"207511fc-ed60-57c4-8b5e-321db5e0955f","children":[],"parent":"ba987ee7-ff86-5399-a4d6-345da0c49be1","internal":{"content":"","type":"Mdx","contentDigest":"0699c4f8e68f9c880580286e17fe02e8","owner":"gatsby-plugin-mdx","counter":102},"frontmatter":{"description":"Views / IO / Table","title":"Views / IO / Table"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/IO/table.mdx"}}},
-    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

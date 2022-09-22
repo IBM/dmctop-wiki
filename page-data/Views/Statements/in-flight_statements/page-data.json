@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-views-statements-in-flight-statements-mdx",
-    "path": "/Views/Statements/in-flight_statements/",
-    "result": {"pageContext":{"frontmatter":{"description":"Views / Statements / In Flight Statements","title":"Views / Statements / In Flight Statements"},"relativePagePath":"/Views/Statements/in-flight_statements.mdx","titleType":"page","MdxNode":{"id":"1fcaf1d0-00e0-5edb-84d6-711eecc155d0","children":[],"parent":"074a597b-62a7-5acd-83d1-20b360df4462","internal":{"content":"","type":"Mdx","contentDigest":"49c466c90c3a9c0b8fc0345151441171","owner":"gatsby-plugin-mdx","counter":117},"frontmatter":{"description":"Views / Statements / In Flight Statements","title":"Views / Statements / In Flight Statements"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/Statements/in-flight_statements.mdx"}}},
-    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

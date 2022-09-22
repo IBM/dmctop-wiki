@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-views-throughput-workloads-mdx",
-    "path": "/Views/Throughput/workloads/",
-    "result": {"pageContext":{"frontmatter":{"description":"Views / Throughput / Workloads","title":"Views / Throughput / Workloads"},"relativePagePath":"/Views/Throughput/workloads.mdx","titleType":"page","MdxNode":{"id":"c39e899f-9d02-537b-9a98-b6cf45c47f63","children":[],"parent":"40fcbbdf-e8c9-5a69-8a79-5c8c7689d2ae","internal":{"content":"","type":"Mdx","contentDigest":"a05e3bf1427caa45f942efa345766423","owner":"gatsby-plugin-mdx","counter":126},"frontmatter":{"description":"Views / Throughput / Workloads","title":"Views / Throughput / Workloads"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/Throughput/workloads.mdx"}}},
-    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

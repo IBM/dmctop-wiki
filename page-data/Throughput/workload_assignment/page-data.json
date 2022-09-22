@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-throughput-workload-assignment-mdx",
+    "path": "/Throughput/workload_assignment/",
+    "result": {"pageContext":{"frontmatter":{"description":"Throughput / Workload Assignment","title":"Throughput / Workload Assignment"},"relativePagePath":"/Throughput/workload_assignment.mdx","titleType":"page","MdxNode":{"id":"6b57f44b-457a-55da-a343-cd4af334103e","children":[],"parent":"d5a97c50-f83f-5083-bf6e-101812c95c49","internal":{"content":"","type":"Mdx","contentDigest":"ba223d5f6ab13cb27f1a649a80a12a08","owner":"gatsby-plugin-mdx","counter":122},"frontmatter":{"description":"Throughput / Workload Assignment","title":"Throughput / Workload Assignment"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Throughput/workload_assignment.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

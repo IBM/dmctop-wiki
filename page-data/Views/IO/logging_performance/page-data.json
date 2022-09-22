@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-views-io-logging-performance-mdx",
-    "path": "/Views/IO/logging_performance/",
-    "result": {"pageContext":{"frontmatter":{"description":"Views / IO / Logging Performance","title":"Views / IO / Logging Performance"},"relativePagePath":"/Views/IO/logging_performance.mdx","titleType":"page","MdxNode":{"id":"cc84b5c7-fa9a-55eb-8b9b-3aa132968f3b","children":[],"parent":"37c6d314-5f9e-5682-aea5-46f2d6cb52c6","internal":{"content":"","type":"Mdx","contentDigest":"edc1c2fdb5e450d944db566773ba2b14","owner":"gatsby-plugin-mdx","counter":100},"frontmatter":{"description":"Views / IO / Logging Performance","title":"Views / IO / Logging Performance"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/IO/logging_performance.mdx"}}},
-    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}
