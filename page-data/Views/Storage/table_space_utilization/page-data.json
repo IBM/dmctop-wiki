@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-views-storage-table-space-utilization-mdx",
+    "path": "/Views/Storage/table_space_utilization/",
+    "result": {"pageContext":{"frontmatter":{"description":"Views / Storage / Table Space Utilization","title":"Views / Storage / Table Space Utilization"},"relativePagePath":"/Views/Storage/table_space_utilization.mdx","titleType":"page","MdxNode":{"id":"fdf58f5a-2b52-5328-ab8e-041050b04177","children":[],"parent":"bd4c8574-0444-5a69-89fd-01f0f34147de","internal":{"content":"","type":"Mdx","contentDigest":"f3d384e25e5a0a6ac2dbff0d1267e30d","owner":"gatsby-plugin-mdx","counter":127},"frontmatter":{"description":"Views / Storage / Table Space Utilization","title":"Views / Storage / Table Space Utilization"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/Storage/table_space_utilization.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

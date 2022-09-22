@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-views-top-consumers-activities-mdx",
+    "path": "/Views/Top_consumers/activities/",
+    "result": {"pageContext":{"frontmatter":{"description":"Views / Top Consumers / Activities","title":"Views / Top Consumers / Activities"},"relativePagePath":"/Views/Top_consumers/activities.mdx","titleType":"page","MdxNode":{"id":"759fc1bd-e923-55ba-81b4-05a35cfc4deb","children":[],"parent":"e8e23bec-0359-5636-818b-99d54c8d7230","internal":{"content":"","type":"Mdx","contentDigest":"e14c42c6228ba93183c7396fd710a315","owner":"gatsby-plugin-mdx","counter":135},"frontmatter":{"description":"Views / Top Consumers / Activities","title":"Views / Top Consumers / Activities"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/Top_consumers/activities.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

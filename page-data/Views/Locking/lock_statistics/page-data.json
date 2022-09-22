@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-views-locking-lock-statistics-mdx",
+    "path": "/Views/Locking/lock_statistics/",
+    "result": {"pageContext":{"frontmatter":{"description":"Views / Locking / Lock Statistics","title":"Views / Locking / Lock Statistics"},"relativePagePath":"/Views/Locking/lock_statistics.mdx","titleType":"page","MdxNode":{"id":"bf60d1a2-5257-5459-b28e-7a6ce1c025f4","children":[],"parent":"834d5f19-6899-5b32-aa01-860c825e1d57","internal":{"content":"","type":"Mdx","contentDigest":"29e27f852400523e752141872d82a1e4","owner":"gatsby-plugin-mdx","counter":117},"frontmatter":{"description":"Views / Locking / Lock Statistics","title":"Views / Locking / Lock Statistics"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/Locking/lock_statistics.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}

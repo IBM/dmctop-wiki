@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-views-throughput-time-spent-mdx",
+    "path": "/Views/Throughput/time_spent/",
+    "result": {"pageContext":{"frontmatter":{"description":"Views / Throughput / Time Spent","title":"Views / Throughput / Time Spent"},"relativePagePath":"/Views/Throughput/time_spent.mdx","titleType":"page","MdxNode":{"id":"cb1a7148-0a8f-5f90-96a4-ac8156b8d4bb","children":[],"parent":"d5d6e97c-221b-5f11-8dee-4f7c111df5dc","internal":{"content":"","type":"Mdx","contentDigest":"b650883b60bce41ad2efebae4ad1dbed","owner":"gatsby-plugin-mdx","counter":133},"frontmatter":{"description":"Views / Throughput / Time Spent","title":"Views / Throughput / Time Spent"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Views/Throughput/time_spent.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}
