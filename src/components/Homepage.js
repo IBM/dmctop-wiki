@@ -3,41 +3,17 @@ import { HomepageBanner, HomepageCallout } from 'gatsby-theme-carbon';
 import HomepageTemplate from 'gatsby-theme-carbon/src/templates/Homepage';
 import { calloutLink } from './Homepage.module.scss';
 
-import Carbon from './carbon.jpg';
+import Carbon from './carbon.jpg'
 
-const FirstLeftText = () => <p>Callout component</p>;
+const FirstLeftText = () => <p>What is <strong>dmctop</strong>?</p>;
 
 const FirstRightText = () => (
   <p>
-    This is a callout component. You can edit the contents by updating the{' '}
-    <a href="https://github.com/carbon-design-system/gatsby-theme-carbon/blob/5fe12de31bb19fbfa2cab7c69cd942f55aa06f79/packages/example/src/gatsby-theme-carbon/templates/Homepage.js">
-      pre-shadowed homepage template
-    </a>
-    . You can also provide <code>color</code> and <code>backgroundColor</code>{' '}
-    props to suit your theme.
-    <a
-      className={calloutLink}
-      href="https://github.com/carbon-design-system/gatsby-theme-carbon/blob/main/packages/example/src/gatsby-theme-carbon/templates/Homepage.js">
-      Homepage source →
-    </a>
+    The <strong>dmctop</strong> utility is a simple text-based tool for monitoring, similar to the dsmtop. The <strong>dmctop</strong> utility can monitor Db2® version 11.1.0 and later fix packs. It is intended primarily for use on Linux® and Windows systems. Beginning with IBM® Db2 Data Management Console v3.1.5, the monitoring utility <strong>dmctop v1.0.2</strong> is bundled with Db2 v11.5.6.
   </p>
 );
 
-const SecondLeftText = () => <p>Callout component</p>;
-
-const SecondRightText = () => (
-  <p>
-    You can also not use these components at all by not providing the callout
-    props to the template or writing your own template.
-    <a
-      className={calloutLink}
-      href="https://github.com/carbon-design-system/gatsby-theme-carbon/blob/main/packages/example/src/gatsby-theme-carbon/templates/Homepage.js">
-      Homepage source →
-    </a>
-  </p>
-);
-
-const BannerText = () => <h1>Carbon Gatsby theme</h1>;
+const BannerText = () => <h1>Welcome to the IBM dmctop Wiki!</h1>;
 
 const customProps = {
   Banner: <HomepageBanner renderText={BannerText} image={Carbon} />,
@@ -48,15 +24,7 @@ const customProps = {
       leftText={FirstLeftText}
       rightText={FirstRightText}
     />
-  ),
-  SecondCallout: (
-    <HomepageCallout
-      leftText={SecondLeftText}
-      rightText={SecondRightText}
-      color="white"
-      backgroundColor="#061f80"
-    />
-  ),
+  )
 };
 
 // spreading the original props gives us props.children (mdx content)
