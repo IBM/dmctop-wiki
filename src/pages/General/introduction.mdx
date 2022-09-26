@@ -1,0 +1,18 @@
+dmctop is a simple text-based tool for monitoring, similar to dsmtop. dmctop can monitor Db2 Version 11.1 fix pack 1 and above. It is intended primarily for use on Linux and Windows (version 1.0.0.0). It can support AIX and MacOS starting from version 1.0.1.0.
+
+# Key features
+dmctop is a lightweight, low-overhead tool that works in a text-only environment, such as a simple Unix command line. There is no web server and no need for a windowing environment. Monitoring is accomplished by using mon_get_xxx table functions. Views can be set to fast refresh rates to provide a real-time view of activity in the monitored database.
+
+
+# Comparison to db2top and dsmtop
+The goal of dmctop is to bring feature parity between db2top and dsmtop. There are some improvements and new features in dmctop, some highlights:
+
+* Default secured connection (SSL) support.
+* Support for DB2 features including PureScale, BLU (column store tables) and workload management.
+* Monitor remote database.
+* Monitor federated database.
+* Easier navigation with menus, view specific help available in the footer section
+* Reset baseline, hide idle connections, visual alerts, spanning view across multiple monitors
+
+# Dependency
+dmctop has dependency on DB2 CLI driver.

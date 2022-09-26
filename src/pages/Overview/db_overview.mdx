@@ -1,13 +1,3 @@
-
-
-
-
-export const Title = () => (
-  <span>
-    DB overview
-  </span>
-);
-
 # Purpose
 The overview tells you at a glance how busy the monitored database is.  It provides basic information about the current level of activity.  For example:
 
@@ -22,6 +12,9 @@ The overview tells you at a glance how busy the monitored database is.  It provi
 # Metric shown
 
 ## Gauge
+
+
+<hr />
 
 ### Act session
 
@@ -69,6 +62,9 @@ SELECT EVENT_STATE ,
 
 
 
+
+<hr />
+
 ### Log used
 
 The percentage of amount of active log space currently used in the database. 
@@ -82,16 +78,25 @@ TOTAL_LOG_USED = [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?
 
 TOTAL_LOG= [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).SUM([TOTAL_LOG_USED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0002530) + [TOTAL_LOG_AVAILABLE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0002531))
 ## Overview
+
+<hr />
+
 ### Start date
 
 The date of the connection to the database (at the database level, this is the first connection to the database), or when the activate database was issued. 
 
 **Source:** [MON_GET_DATABASE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-database-get-database-metrics)(#MEMBER#).MIN([DB_CONN_TIME](https://www.ibm.com/docs/en/db2/11.5?topic=reference-d#r0001154))
+
+<hr />
+
 ### Start time
 
 The time the monitored database was activated.
 
 **Source:** [CURRENT TIMESTAMP](https://www.ibm.com/docs/en/db2/11.5?topic=registers-current-timestamp)
+
+
+<hr />
 
 ### Database status
 
@@ -109,6 +114,9 @@ The current status of the database. According to the Knowledge Center, the possi
 
 **Source:** [MON_GET_DATABASE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-database-get-database-metrics)(#MEMBER#).MAX([DB_STATUS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-d#r0001156))
 
+
+<hr />
+
 ### System physical mem
 
 The total amount of physical memory on this host
@@ -116,6 +124,9 @@ The total amount of physical memory on this host
 **Source:** [SYSPROC.ENV_GET_SYSTEM_RESOURCES](https://www.ibm.com/docs/en/db2/11.5?topic=erv-env-get-system-resources-table-function-return-system-information)().[MEMORY_TOTAL](https://www.ibm.com/docs/en/db2/11.5?topic=reference-m#r0060193)
 
 ## Resource consumption
+
+<hr />
+
 ### CPU usage %
 
 The total cpu usage over the system.
@@ -145,11 +156,17 @@ CPU_IDLE_TOTAL = [SYSPROC.ENV_GET_SYSTEM_RESOURCES](https://www.ibm.com/docs/en/
 CPU_IOWAIT_TOTAL = [SYSPROC.ENV_GET_SYSTEM_RESOURCES](https://www.ibm.com/docs/en/db2/11.5?topic=erv-env-get-system-resources-table-function-return-system-information)().[CPU_IOWAIT](https://www.ibm.com/docs/en/db2/11.5?topic=reference-c#r0060209)
 
 
+
+<hr />
+
 ### Instance mem committed
 
 Memory committed, as opposed to used, is a better measure of the memory footprint of DB2.  That is, how much memory is committed by the OS for use by DB2 and hence unavailable for other processes.
 
 **Source:** [MON_GET_MEMORY_SET](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-memory-set-get-memory-set-information)('DBMS', [CURRENT_SERVER](https://www.ibm.com/docs/en/db2-for-zos/11?topic=registers-current-server), #MEMBER#).SUM([MEMORY_SET_COMMITTED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-m#r0059448))
+
+
+<hr />
 
 ### Database mem committed
 
@@ -158,6 +175,9 @@ The portion of memory committed for just this database, as opposed to the whole 
 **Source:** [MON_GET_MEMORY_SET](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-memory-set-get-memory-set-information)('DATABASE', [CURRENT_SERVER](https://www.ibm.com/docs/en/db2-for-zos/11?topic=registers-current-server), #MEMBER#).SUM([MEMORY_SET_COMMITTED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-m#r0059448))
 
 
+
+<hr />
+
 ### Bufferpool memory used
 
 Buffer pool memory is typically the largest component of memory usage by DB2.  So it is broken out separately here.
@@ -165,11 +185,17 @@ Buffer pool memory is typically the largest component of memory usage by DB2.  S
 **Source:** [MON_GET_MEMORY_POOL](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-memory-pool-get-memory-pool-information)('DATABASE',NULL, #MEMBER#).SUM([MEMORY_POOL_USED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-m#r0059534)) WHERE  MEMORY_POOL_TYPE='BP'
 
 
+
+<hr />
+
 ### Shared sort memory used
 
 Shared sort memory committed in use by this memory pool
 
 **Source:** [MON_GET_MEMORY_POOL](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-memory-pool-get-memory-pool-information)('DATABASE',NULL, #MEMBER#).SUM([MEMORY_POOL_USED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-m#r0059534)) WHERE  MEMORY_POOL_TYPE='SHARED_SORT'
+
+
+<hr />
 
 ### Storage usage %
 
@@ -183,6 +209,9 @@ FS_USED_SIZE = [MON_GET_CONTAINER](https://www.ibm.com/docs/en/db2woc?topic=mpf-
 
 FS_TOTAL_SIZE = [MON_GET_CONTAINER](https://www.ibm.com/docs/en/db2woc?topic=mpf-mon-get-container-get-table-space-container-metrics)('', #MEMBER#).[FS_TOTAL_SIZE ](https://www.ibm.com/docs/en/db2woc?topic=reference-f#r0022296)
 
+
+
+<hr />
 
 ### Log usage %
 
@@ -206,12 +235,18 @@ The  amount of active log space currently used in the database.
 **Source:** TOTAL_LOG_USED = [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).SUM([TOTAL_LOG_USED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0002530))
 
 ## Throughput
+
+<hr />
+
 ### Transactions
 
 The total number of commit and rollback statements issued by the client application.
 
 
 **Source:** [MON_GET_DATABASE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-database-get-database-metrics)(#MEMBER#).SUM([TOTAL_APP_COMMITS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0056527) + [TOTAL_APP_ROLLBACKS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0056528))
+
+
+<hr />
 
 ### Select stmts
 
@@ -220,11 +255,17 @@ The number of SQL SELECT statements that were executed.
 
 **Source:** [MON_GET_DATABASE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-database-get-database-metrics)(#MEMBER#).SUM([SELECT_SQL_STMTS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-s#r0001334))
 
+
+<hr />
+
 ### Uid stmts
 
 The number of UPDATE, INSERT, MERGE and DELETE statements that were executed. 
 
 **Source:** [MON_GET_DATABASE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-database-get-database-metrics)(#MEMBER#).SUM([UID_SQL_STMTS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-u#r0001335))
+
+
+<hr />
 
 ### Activities aborted
 
@@ -233,12 +274,18 @@ The total number of coordinator activities that completed with errors.
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([ACT_ABORTED_TOTAL](https://www.ibm.com/docs/en/db2/11.5?topic=reference-#r0054006))
 
+
+<hr />
+
 ### Activities queued
 
 The number of times that activities or connections have been queued by a WLM threshold.
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([WLM_QUEUE_ASSIGNMENTS_TOTAL](https://www.ibm.com/docs/en/db2/11.5?topic=reference-w#r0054062))
 
+
+
+<hr />
 
 ### Read efficiency
 
@@ -252,11 +299,17 @@ ROWS_READ = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topi
 
 ROWS_RETURNED = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([ROWS_RETURNED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0051569))
 
+
+<hr />
+
 ### Log reads
 
 The number of log pages read from disk by the logger. 
 
 **Source:** [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).SUM([LOG_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0001278))
+
+
+<hr />
 
 ### Log writes
 
@@ -264,11 +317,17 @@ The number of log pages written to disk by the logger.
 
 **Source:** [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).SUM([LOG_WRITES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0001279))
 
+
+<hr />
+
 ### Logical reads
 
 Indicates the number of data, index, and column-organized pages which have been requested  from the buffer pool (logical) for regular, large and temporary table spaces.
 
 **Source:**  [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([POOL_DATA_L_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001235) + [POOL_INDEX_L_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001238) + [POOL_XDA_L_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0022731) + [POOL_TEMP_DATA_L_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0011302) + [POOL_TEMP_INDEX_L_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0011303) + [POOL_TEMP_XDA_L_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0022738) + [POOL_COL_L_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0060763) + [POOL_TEMP_COL_L_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0060873))
+
+
+<hr />
 
 ### Physical reads
 
@@ -277,17 +336,26 @@ Indicates the number of data, index, and column-organized pages which have been 
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([POOL_DATA_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001236) + [POOL_INDEX_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001239) + [POOL_XDA_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0022730) + [POOL_TEMP_DATA_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0011300) + [POOL_TEMP_INDEX_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0011301) + [POOL_TEMP_XDA_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0022739) + [POOL_COL_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0060858) + [POOL_TEMP_COL_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0060874))
 
+
+<hr />
+
 ### Async reads
 
 Indicates the number of data, index, and column-organized pages which have been requested from the table space containers (physical) for  all types of table spaces
 
 **Source:** [MON_GET_DATABASE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-database-get-database-metrics)(#MEMBER#).SUM([POOL_ASYNC_DATA_READS](https://www.ibm.com/docs/en/SSEPGG_11.5.0/com.ibm.db2.luw.admin.mon.doc/doc/monitor-elements-p.html#r0001244) + [POOL_ASYNC_INDEX_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001247) + [POOL_ASYNC_XDA_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0022733) + [POOL_ASYNC_COL_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0060851))
 
+
+<hr />
+
 ### Writes
 
 The number of write operations that do not use the buffer pool. 
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([DIRECT_WRITES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-d#r0001261))
+
+
+<hr />
 
 ### Async writes
 
@@ -297,6 +365,9 @@ The number of times a buffer pool data, index, and column-organized pages was ph
 **Source:** [MON_GET_DATABASE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-database-get-database-metrics)(#MEMBER#).SUM([POOL_ASYNC_DATA_WRITES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001245) + [POOL_ASYNC_INDEX_WRITES](POOL_ASYNC_INDEX_WRITES) + [POOL_ASYNC_XDA_WRITES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0022734) + [POOL_ASYNC_COL_WRITES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0060893))
 
 ## Contention
+
+
+<hr />
 
 ### Connections
 
@@ -333,6 +404,9 @@ SELECT EVENT_STATE ,
 
 
 
+
+<hr />
+
 ### Active connections
 
 The number of active connections.
@@ -367,11 +441,17 @@ SELECT EVENT_STATE ,
 
 
 
+
+<hr />
+
 ### Lock held
 
 The number of locks currently held. 
 
 **Source:**  [MON_GET_DATABASE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-database-get-database-metrics)(#MEMBER#).SUM([NUM_LOCKS_HELD](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0001281))
+
+
+<hr />
 
 ### Lock waits
 
@@ -379,17 +459,26 @@ The total number of times applications or connections waited for locks.
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([LOCK_WAITS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0001293))
 
+
+<hr />
+
 ### Lock timeouts
 
 The number of times that a request to lock an object timed out instead of being granted. 
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([LOCK_TIMEOUTS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0001290))
 
+
+<hr />
+
 ### Lock escalations
 
 The number of times that locks have been escalated from several row locks to a table lock. 
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([LOCK_ESCALS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0001284))
+
+
+<hr />
 
 ### Deadlocks
 
@@ -398,12 +487,18 @@ The total number of deadlocks that have occurred.
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([DEADLOCKS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-d#r0001283))
 
 
+
+<hr />
+
 ### Threshold violations
 
 The total number of times a threshold was violated. 
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([THRESH_VIOLATIONS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0056501))
 
+
+
+<hr />
 
 ### Hit ratio
 
@@ -426,6 +521,9 @@ DIRECT_READS = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?t
 
 
 ## Timespent
+
+<hr />
+
 ### Avg p read time
 
 The average time for a page requested from the table space containers (physical) for all types of table spaces.
@@ -440,6 +538,9 @@ POOL_READ_TIME = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5
 PHYSICAL_READS = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([POOL_DATA_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001236) + [POOL_INDEX_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001239) + [POOL_XDA_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0022730) + [POOL_TEMP_DATA_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0011300) + [POOL_TEMP_INDEX_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0011301) + [POOL_TEMP_XDA_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0022739) + [POOL_COL_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0060858) + [POOL_TEMP_COL_P_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0060874))
 
 
+
+<hr />
+
 ### Avg d read time
 
 The average time required to perform the direct reads.
@@ -453,11 +554,17 @@ DIRECT_READ_TIME = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11
 
 DIRECT_READS = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([DIRECT_READS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-d#r0001260))
 
+
+<hr />
+
 ### Sorts
 
 The total number of sorts that have been executed. 
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([TOTAL_SORTS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0001219))
+
+
+<hr />
 
 ### Sort overflows
 
@@ -466,11 +573,17 @@ The total number of sorts that ran out of sort heap and may have required disk s
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([SORT_OVERFLOWS](https://www.ibm.com/docs/en/SSEPGG_11.5.0/com.ibm.db2.luw.admin.mon.doc/doc/monitor-elements-s.html#r0001221))
 
+
+<hr />
+
 ### Hash joins
 
 The total number of hash joins executed. 
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([TOTAL_HASH_JOINS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0002283))
+
+
+<hr />
 
 ### Hash join overflows
 
@@ -478,17 +591,26 @@ The number of times that hash join data exceeded the available sort heap space.
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([HASH_JOIN_OVERFLOWS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-h#r0002286))
 
+
+<hr />
+
 ### Hash grpbys
 
 The total number of hashed GROUP BY operations.
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([TOTAL_HASH_GRPBYS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0061038))
 
+
+<hr />
+
 ### Hash grpb overflows
 
 The number of times that GROUP BY operations using hashing as their grouping method exceeded the available sort heap memory.
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([HASH_GRPBY_OVERFLOWS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-h#r0061039))
+
+
+<hr />
 
 ### Avg p write time
 
@@ -504,6 +626,9 @@ POOL_WRITE_TIME = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.
 WRITES = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([POOL_DATA_WRITES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001237) + [POOL_INDEX_WRITES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0001240) + [POOL_XDA_WRITES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0022732))
 
 
+
+<hr />
+
 ### Avg d write time
 
 The average time required to perform a direct write. 
@@ -516,8 +641,13 @@ DIRECT_WRITE_TIME = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/1
 
 DIRECT_WRITES = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([DIRECT_WRITES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-d#r0001261))
 
+
+<hr />
+
 ### Pct time queued
 
 The time spent waiting on a WLM queuing threshold. 
 
 **Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL,NULL,#MEMBER#).SUM([WLM_QUEUE_TIME_TOTAL](https://www.ibm.com/docs/en/db2/11.5?topic=reference-w#r0054063))
+
+

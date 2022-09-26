@@ -1,0 +1,145 @@
+# Run dmctop
+
+## Run dmctop from Db2 Server
+When running on DB server, dmctop connects to local database without requiring credentials. dmctop uses existing ODBC driver on the server hence installation of separate ODBC driver is not required. 
+
+* Copy dmctop on server under desire location
+
+* Run dmctop
+
+Linux:
+```
+dmctop  -d SAMPLE
+```
+
+Windows:
+``` 
+dmctop.exe  -d SAMPLE
+```
+Now, `dmctop v1.0.0.0` is bundled with Db2 v11.5.5. Without copying dmctop on server, you can directly do `Run dmctop` step to start the tool.
+
+## Run dmctop remotely
+The easiest way to run dmctop is to fully specify the database and user credentials. The dmctop will use the CLI driver. 
+
+
+Linux:
+```
+./dmctop  -d <database_name>  -n <host_name>  -r <port_number>  -u <user_id> [-cert-path Root-CA certificate absolute path]
+```
+
+
+Windows:
+```
+dmctop.exe  -d <database_name>  -n <host_name>  -r <port_number>  -u <user_id> [-cert-path Root-CA certificate absolute path]
+```
+
+For example:
+
+
+Linux:
+```
+dmctop  -d SAMPLE  -n localhost  -r 50000  -u db2inst1
+```
+
+Windows:
+```
+dmctop.exe  -d SAMPLE  -n localhost  -r 50000  -u db2inst1
+```
+
+
+By default dmctop uses secure connection, if databases is configured with internal CA signed certificate then it needs to be provided with specified option.
+
+For example:
+
+Linux:
+```
+dmctop  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -cert-path \home\db2inst1\ssl\inernal-CA.arm
+```
+
+
+Windows:
+```
+dmctop.exe  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -cert-path C:/ssl/inernal-CA.arm
+```
+
+
+
+If SSL is not configured for databases then `-insecure` option can be used to disable default secure connection.
+
+For example:
+
+Linux:
+```
+dmctop  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -insecure
+```
+Windows:
+```
+dmctop.exe  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -insecure
+```
+
+
+dmctop requires a password. You can specify the password on the command line with -p. However, this is not recommended as the password will then be visible to other users running similar commands. 
+
+For example:
+
+Linux:
+```
+dmctop  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -p <password>
+```
+
+Windows:
+```
+dmctop.exe  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -p <password>
+```
+
+## Run dmctop in background mode
+ When using the -b parameter, dmctop saves information to file in CSV format. Issuing multiple sub-options for background mode (-b) is not supported. 
+
+The -b parameter takes one of the following single character sub-option values
+
+d - overview
+
+l - connections 
+
+a - top consumer activities
+
+J - Skew monitor
+
+s - in-flight statements 
+
+D - Package cache
+
+L - Lock statistics
+
+m - DB memory 
+
+I - Instance memory
+
+F - Federation
+
+A - HADR
+
+For example:
+
+Using default file name
+
+Linux:
+```
+dmctop  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -insecure -b d
+```
+Windows:
+```
+dmctop.exe  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -insecure -b d
+```
+
+Specifying output file name
+
+Linux:
+``` 
+dmctop  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -insecure -b d -f <outputFile>.csv
+```
+
+Windows:
+```
+dmctop.exe  -d SAMPLE  -n localhost  -r 50000  -u db2inst1 -insecure -b d -f <outputFile>.csv
+```

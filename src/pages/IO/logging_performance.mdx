@@ -1,0 +1,115 @@
+# Purpose
+
+
+# Metric shown
+
+
+
+<hr />
+
+### Member
+
+The identifier for the database member from which the data was retrieved for this result record.
+
+**Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL, NULL, #MEMBER#).[MEMBER](https://www.ibm.com/docs/en/db2/11.5?topic=reference-m#r0054432)
+
+
+<hr />
+
+### Actual log writes / Delta log writes/s
+
+The number of I/O requests issued by the logger for writing log data to the disk.
+
+**Source:** [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).SUM([NUM_LOG_WRITE_IO](https://www.ibm.com/docs/en/db2/11.5?topic=reference-n#r0011681))
+
+
+<hr />
+
+### Average log Writes times
+
+The average elapsed time spent by the logger writing log data to the disk. 
+
+= LOG_WRITE_TIME / NUM_LOG_WRITE_IO 
+
+**Source:**
+
+LOG_WRITE_TIME = [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).AVG([LOG_WRITE_TIME](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0011679))
+
+NUM_LOG_WRITE_IO = [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).SUM([NUM_LOG_WRITE_IO](https://www.ibm.com/docs/en/db2/11.5?topic=reference-n#r0011681))
+
+
+<hr />
+
+### Actual log reads / Delta log reads/s
+
+The number of I/O requests issued by the logger for reading log data from the disk.
+
+**Source:** [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).SUM([NUM_LOG_READ_IO](https://www.ibm.com/docs/en/db2/11.5?topic=reference-n#r0011682))
+
+
+<hr />
+
+### Average log reads times
+
+
+The average elapsed time spent by the logger reading log data from the disk.
+
+= LOG_READ_TIME / NUM_LOG_READ_IO 
+
+**Source:**
+
+LOG_READ_TIME = [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).AVG([LOG_READ_TIME](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0011680))
+
+NUM_LOG_READ_IO = [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).SUM([NUM_LOG_READ_IO](https://www.ibm.com/docs/en/db2/11.5?topic=reference-n#r0011682))
+
+
+
+<hr />
+
+### Actual logFullEvents / Delta logFullEvents/s
+
+The number of times agents have to wait for log data to write to disk while copying log records into the log buffer.
+
+**Source:** [MON_GET_TRANSACTION_LOG](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-transaction-log-table-function-get-log-information)(#MEMBER#).SUM([NUM_LOG_BUFFER_FULL](https://www.ibm.com/docs/en/db2/11.5?topic=reference-n#r0011684))
+
+
+
+<hr />
+
+### Actual commits / Delta commits/s
+
+The total number of commit statements issued by the client application.
+
+**Source:** [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL, NULL,  #MEMBER#).SUM([TOTAL_APP_COMMITS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0056527))
+
+
+
+<hr />
+
+### Actual activities/commits
+
+
+The average number of coordinator activities at any nesting level that completed successfully per commit.
+
+= ACT_COMPLETED_TOTAL / TOTAL_APP_COMMITS
+
+**Source:**
+
+ACT_COMPLETED_TOTAL = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL, NULL, #MEMBER#).SUM([ACT_COMPLETED_TOTAL](https://www.ibm.com/docs/en/db2/11.5?topic=reference-#r0054007))
+
+TOTAL_APP_COMMITS = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL, NULL, #MEMBER#).SUM([TOTAL_APP_COMMITS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0056527))
+
+
+<hr />
+
+### Average commits times
+
+The average amount of time spent performing commit processing on the database server per commit. 
+
+= TOTAL_COMMIT_TIME / TOTAL_APP_COMMITS
+
+**Source:**
+
+TOTAL_COMMIT_TIME = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL, NULL, #MEMBER#).SUM([TOTAL_COMMIT_TIME](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0056530))
+
+TOTAL_APP_COMMITS = [MON_GET_SERVICE_SUBCLASS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-service-subclass-get-service-subclass-metrics)(NULL, NULL, #MEMBER#).SUM([TOTAL_APP_COMMITS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0056527))

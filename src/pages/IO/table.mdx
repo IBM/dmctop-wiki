@@ -1,0 +1,226 @@
+# Purpose
+
+
+# Metric shown
+
+## Gauge
+
+
+<hr />
+
+### Rows r+w/s
+
+The percentage of rows read from the table.
+
+= ROWS_READ / ROWS_TOTAL 
+
+**Source:** 
+
+ROWS_READ = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([ROWS_READ](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001317))
+
+ROWS_TOTAL = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).(SUM([ROWS_READ](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001317)) + SUM([ROWS_INSERTED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001313)) + SUM([ROWS_UPDATED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001314)) + SUM([ROWS_DELETED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001312)))
+
+## Grid
+
+
+<hr />
+
+### Rows read
+
+The number of rows read from the table.
+
+**Source:**  [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([ROWS_READ](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001317))
+
+
+
+
+<hr />
+
+### Rows written
+
+The number of rows insertions, updates, and deletions attempted.
+
+**Source:**  [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).(SUM([ROWS_INSERTED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001313)) + SUM([ROWS_UPDATED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001314)) + SUM([ROWS_DELETED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001312)))
+
+
+<hr />
+
+### Temp space
+
+The total page size of system temporary data used on disk where `TBSP_CONTENT_TYPE` of table space equals to 'SYSTEMP'.
+
+= (DATA_OBJECT_L_PAGES + INDEX_OBJECT_L_PAGES) * TBSP_PAGE_SIZE 
+
+**Source:** 
+
+DATA_OBJECT_L_PAGES = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([DATA_OBJECT_L_PAGES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-d#r0059958))
+
+INDEX_OBJECT_L_PAGES = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([INDEX_OBJECT_L_PAGES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-i#r0059961))
+
+TBSP_PAGE_SIZE = [MON_GET_TABLESPACE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-tablespace-get-table-space-metrics).[TBSP_PAGE_SIZE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0007534)
+
+TBSP_CONTENT_TYPE = [MON_GET_TABLESPACE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-tablespace-get-table-space-metrics).[TBSP_CONTENT_TYPE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-tablespace-get-table-space-metrics)
+
+
+
+<hr />
+
+### Active usr space
+
+The total page size of non-system-temporary data used on disk where `TBSP_CONTENT_TYPE` of table space does not equal to 'SYSTEMP'.
+
+= (DATA_OBJECT_L_PAGES + INDEX_OBJECT_L_PAGES) * TBSP_PAGE_SIZE 
+
+
+
+DATA_OBJECT_L_PAGES = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([DATA_OBJECT_L_PAGES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-d#r0059958))
+
+INDEX_OBJECT_L_PAGES = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([INDEX_OBJECT_L_PAGES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-i#r0059961))
+
+TBSP_PAGE_SIZE = [MON_GET_TABLESPACE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-tablespace-get-table-space-metrics).[TBSP_PAGE_SIZE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0007534)
+
+TBSP_CONTENT_TYPE = [MON_GET_TABLESPACE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-tablespace-get-table-space-metrics).[TBSP_CONTENT_TYPE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-tablespace-get-table-space-metrics)
+
+
+## Table
+
+
+<hr />
+
+### Table name
+
+The name of the table.
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).[TABNAME](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0001310)
+
+
+<hr />
+
+### Table type
+
+The type of table for which information is returned.
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).[TAB_TYPE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0001309)
+
+
+<hr />
+
+### Table scans
+
+The number of scans on this table.
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([TABLE_SCANS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0054222))
+
+
+<hr />
+
+### Rows read
+
+The number of rows read from the table.
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([ROWS_READ](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001317))
+
+
+<hr />
+
+### Rows inserted
+
+The number of row insertions attempted.
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([ROWS_INSERTED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001313))
+
+
+<hr />
+
+### Rows updated
+
+This is the number of row updates attempted.
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([ROWS_UPDATED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001314))
+
+
+<hr />
+
+### Rows deleted
+
+This is the number of row deletions attempted.
+
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([ROWS_DELETED](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001312))
+
+
+<hr />
+
+### Page reorgs
+
+The number of page reorganizations executed for a table.
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([PAGE_REORGS](https://www.ibm.com/docs/en/db2/11.5?topic=reference-p#r0002288))
+
+
+<hr />
+
+### Rows overflows
+
+The number of accesses (reads and writes) to overflowed rows of this table.
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([OVERFLOW_ACCESSES](https://www.ibm.com/docs/en/db2/11.5?topic=reference-o#r0001318))
+
+
+<hr />
+
+### Appl handle
+
+The identifier for application.
+
+If `TAB_TYPE` is 'TEMP_TABLE' and `TABSCHEMA` has '.',  then the value is the string before '.'.
+
+
+**Source:**
+
+TAB_TYPE = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).[TAB_TYPE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0001309)
+
+TABSCHEMA = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).[TABSCHEMA](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0001311)
+
+
+
+
+<hr />
+
+### Db user
+
+The db user.
+
+
+If `TAB_TYPE` is 'TEMP_TABLE' and `TABSCHEMA` has '.',  then the value is the string after '.'.
+
+**Source:**
+
+TAB_TYPE = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).[TAB_TYPE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0001309)
+
+TABSCHEMA = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).[TABSCHEMA](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0001311)
+
+
+
+
+<hr />
+
+### # of member
+
+The number of distinct MEMBER in `MON_GET_TABLE`.
+
+**Source:** [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).[MEMBER](https://www.ibm.com/docs/en/db2/11.5?topic=reference-m#r0054432)
+
+
+
+<hr />
+
+### Rows read skew 
+
+The maximum number of rows read from the table skewed from average.
+
+= 1 - AVG(ROWS_READ)/MAX(ROWS_READ)
+
+**Source:**
+
+ROWS_READ = [MON_GET_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=functions-mon-get-table-get-table-metrics)(NULL, NULL, #MEMBER#).SUM([ROWS_READ](https://www.ibm.com/docs/en/db2/11.5?topic=reference-r#r0001317))

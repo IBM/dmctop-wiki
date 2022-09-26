@@ -1,0 +1,131 @@
+# Purpose
+
+# Screenshot
+![image](./images/table_movement.png)
+
+
+
+# Metric shown
+
+
+<hr />
+
+### Schema
+
+The schema of the table.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[TABSCHEMA](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0001311)
+
+
+<hr />
+
+### Table name
+
+The name of the table.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[TABNAME](https://www.ibm.com/docs/en/db2/11.5?topic=reference-t#r0001310)
+
+
+
+<hr />
+
+### Status
+
+Displays the current status of the online table move:
+* INIT: INIT is in progress
+* COPY: COPY is in progress or is possible
+* REPLAY: REPLAY is in progress or REPLAY and SWAP are possible
+* CLEANUP: MOVE is complete, but cleanup has not finished or CLEANUP is possible
+* CANCEL: CANCEL is in progress, but cancel has not finished or CANCEL is possible
+* COMPLETE: MOVE and CLEANUP are complete
+* COMPLETE_WITH_WARNINGS: MOVE and CLEANUP are complete, however there are warnings (listed under the WARNINGS key).
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[STATUS](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+
+
+
+<hr />
+
+### Cleanup start
+
+Displays the CLEANUP phase start time.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[CLEANUP_START](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+
+
+<hr />
+
+### Cleanup end
+
+Displays the CLEANUP phase end time.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[CLEANUP_END](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+
+
+<hr />
+
+### Copy start
+
+Displays the COPY phase start time.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[COPY_START](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+
+
+<hr />
+
+### Copy end
+
+Displays the COPY phase end time.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[COPY_END](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+
+
+
+<hr />
+
+### Copy total rows
+
+Displays the total number of rows copied during the COPY phase.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[COPY_TOTAL_ROWS](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+
+
+
+<hr />
+
+### Replay total time
+
+Displays the accumulated time in seconds used for replaying rows.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[REPLAY_TOTAL_TIME](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+
+
+
+<hr />
+
+### Replay total rows
+
+Displays the accumulated number of replayed rows.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[REPLAY_TOTAL_ROWS](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+
+
+<hr />
+
+### Swap start
+
+Displays the SWAP phase start time.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[SWAP_START](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+
+
+
+
+<hr />
+
+### Swap end
+
+Displays the SWAP phase end time.
+
+**Source:** [SYSTOOLS.ADMIN_MOVE_TABLE](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online).[SWAP_END](https://www.ibm.com/docs/en/db2/11.5?topic=procedure-admin-move-table-move-tables-online)
+

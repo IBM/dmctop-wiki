@@ -1,0 +1,84 @@
+# Purpose
+
+
+# Screenshot
+![image](./images/lock_objects.png)
+
+
+
+# Metric shown
+
+
+<hr />
+
+### Application handle
+
+A system-wide unique ID for the application.
+
+**Source:** [MON_GET_LOCKS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-locks-table-function-list-all-locks-in-currently-connected-database)(NULL, #MEMBER#).[APPLICATION_HANDLE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-#r0054410)
+
+
+<hr />
+
+### Object type
+
+The type of object against which the application holds a lock (for object-lock-level information), or the type of object for which the application is waiting to obtain a lock (for application-level and deadlock-level information).
+
+**Source:** [MON_GET_LOCKS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-locks-table-function-list-all-locks-in-currently-connected-database)(NULL, #MEMBER#).[LOCK_OBJECT_TYPE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0001288)
+
+
+<hr />
+
+### Table schema
+
+Schema name of the object.
+
+**Source:** [SYSCAT.TABLES](https://www.ibm.com/docs/en/db2/11.5?topic=views-syscattables).[TABSCHEMA](https://www.ibm.com/docs/en/db2/11.5?topic=views-syscattables)
+
+
+<hr />
+
+### Table name
+
+Unqualified name of the object.
+
+**Source:** [SYSCAT.TABLES](https://www.ibm.com/docs/en/db2/11.5?topic=views-syscattables).[TABNAME](https://www.ibm.com/docs/en/db2/11.5?topic=views-syscattables)
+
+
+
+<hr />
+
+### Lock name
+
+The name of the lock.
+
+**Source:** [MON_GET_LOCKS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-locks-table-function-list-all-locks-in-currently-connected-database)(NULL, #MEMBER#).[LOCK_NAME](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0009819)
+
+
+<hr />
+
+### Lock mode
+
+The type of lock being held. 
+
+**Source:** [MON_GET_LOCKS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-locks-table-function-list-all-locks-in-currently-connected-database)(NULL, #MEMBER#).[LOCK_MODE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0001286)
+
+
+<hr />
+
+### Original lock mode 
+
+The original lock mode before conversion.
+
+**Source:** [MON_GET_LOCKS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-locks-table-function-list-all-locks-in-currently-connected-database)(NULL, #MEMBER#).[LOCK_CURRENT_MODE](https://www.ibm.com/docs/en/db2/11.5?topic=reference-l#r0009816)
+
+
+<hr />
+
+### Database member
+
+The numeric identifier for the database member from which the data was retrieved for this result record.
+
+**Source:** [MON_GET_LOCKS](https://www.ibm.com/docs/en/db2/11.5?topic=mpf-mon-get-locks-table-function-list-all-locks-in-currently-connected-database)(NULL, #MEMBER#).[MEMBER](https://www.ibm.com/docs/en/db2/11.5?topic=reference-m#r0054432)
+
+
