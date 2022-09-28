@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-getting-started-help-manual-mdx",
+    "path": "/Getting_started/help_manual/",
+    "result": {"pageContext":{"frontmatter":{"description":"Getting Started / Help Manual","title":"Getting Started / Help Manual"},"relativePagePath":"/Getting_started/help_manual.mdx","titleType":"page","MdxNode":{"id":"102ddbde-a7db-5139-8dc4-d10b24748f5a","children":[],"parent":"afcdd78f-d066-5c62-ac24-aad341aad934","internal":{"content":"","type":"Mdx","contentDigest":"881e585bf751fb0725056ad5e294817e","owner":"gatsby-plugin-mdx","counter":153},"frontmatter":{"description":"Getting Started / Help Manual","title":"Getting Started / Help Manual"},"exports":{},"rawBody":"","fileAbsolutePath":"C:/Users/0G6714649/Documents/dmctop/dmctop-wiki/src/pages/Getting_started/help_manual.mdx"}}},
+    "staticQueryHashes": ["1364590287","137577622","2102389209","2456312558","2746626797","3018647132","3037994772","768070550"]}
