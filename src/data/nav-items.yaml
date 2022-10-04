@@ -1,12 +1,15 @@
 - title: Introduction
   pages:
-    - path: /General/introduction
+    - path: /introduction
 - title: Installation
   pages:
-    - path: /General/installation
+    - path: /installation
 - title: Getting started
   pages:
-    - path: /General/getting_started
+    - title: Run dmctop
+      path: /Getting_started/run_dmctop
+    - title: Hot Keys
+      path: /Getting_started/hot_keys
   hasDivider: true
 - title: Overview
   pages:
@@ -44,7 +47,7 @@
       path: /Statements/in-flight_statements
     - title: Executed SQL (pkg cache)
       path: /Statements/executed_sql
-- title: Throughput
+- title: IO
   pages:
     - title: Bufferpools
       path: /IO/bufferpools
@@ -69,7 +72,7 @@
     - title: Locks
       path: /Locking/locks
     - title: Locked objects
-      path: /Locking/locked_objects_mdx
+      path: /Locking/locked_objects
 - title: Memory
   pages:
     - title: Database memory pools

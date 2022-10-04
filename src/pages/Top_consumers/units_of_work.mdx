@@ -1,5 +1,16 @@
 # Purpose
 
+Units of work view shows the user which units of work are consuming the most resources.  There are some important scenarios that can be difficult to detect unless you look at metrics on transactions.
+
+**Transaction left open**
+
+If an application starts a transaction, does some work, and then never commits or rolls back, it will pin the log file where it started.  Backup will be unable to free the log file, and depending on how the database is configured a number of bad things can happen, such as filling all available disk space with new log files.
+
+**Transaction holding excessive locks**
+
+Applications that acquire many locks in a single transaction and are slow to release them impact other work in the database.
+
+
 
 # Screenshot
 ![image](./images/units_of_work.png)

@@ -1,6 +1,6 @@
 # Purpose
 
-Show a breakdown of where the monitored database is spending time, broken down to the full granularity provided by DB2.
+Timespent view shows a breakdown of where the monitored database is spending time, broken down to the full granularity provided by DB2.
 
 --
 
@@ -8,7 +8,7 @@ This view shows where the database is spending its time.  You should be able to 
 
 DB2 organizes the monitor elements for time spent in a hierarchy.  For example, there is a monitor element for time spent waiting, which is broken down into many individual elements covering the various things that activities wait for, such as locks, prefetchers, logging, etc.  The particular hierarchy shown by dsmtop is the “System Dimension” one, documented here:
 
-http://www-01.ibm.com/support/knowledgecenter/SSEPGG_10.5.0/com.ibm.db2.luw.admin.mon.doc/doc/c0055434.html?lang=en
+https://www.ibm.com/docs/en/db2/11.5?topic=elements-time-spent-monitor-element-hierarchy
 
 For each element shown, we show what percentage it constitutes of each of its parent element.  In the current implementation, we present only a summarized view across all members, which means that the stats for the Fast Communication Subsystem (FCM), which routes data and requests between members, is excluded because there is no meaningful aggregation possible for these monitor elements.
 

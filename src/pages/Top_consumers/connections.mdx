@@ -1,5 +1,10 @@
 # Purpose
 
+Find the connections (sessions) that have consumed the most resources over their lifetime.  This view is helpful for diagnosing problems where large numbers of small activities in aggregate are consuming excessive resources.  A common scenario of this type is applications loading data one row at a time using singleton inserts.  This can be very disruptive but each individual insert is tiny and so is the singleton transaction associated with it.  This view will highlight connections engaged in these sort of activities.
+
+Note that this overlaps somewhat in functionality with the [Sessions (connections)](/Sessions/connections) view.  If you go to the connections view, in counter mode, you could select various columns one at a time and sort by them to find the connections that have consumed the most CPU, read the most rows, etc.  This view provides a convenient way to get similar information in one step.
+
+
 
 # Screenshot
 ![image](./images/connections.png)

@@ -1,5 +1,19 @@
 # Purpose
 
+Use this view to find sessions (connections) that have been involved in locking problems:
+
+* Sessions that have recently experienced excessive lock waits, time outs, escalations or deadlocks
+* Sessions that have consumed excessive log space over their lifetime
+* Sessions that are currently holding many locks
+* Idle sessions
+
+For context, this view also shows some basic information to help you identify the session without needing to jump to another view:
+
+* Application Name
+* User ID
+* Workload Name
+
+
 
 # Screenshot
 ![image](./images/lock_statistics.png)
