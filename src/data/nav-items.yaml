@@ -1,6 +1,9 @@
 - title: Introduction
   pages:
     - path: /introduction
+- title: Feature restrictions
+  pages:
+    - path: /feature_restriction
 - title: Installation
   pages:
     - path: /installation

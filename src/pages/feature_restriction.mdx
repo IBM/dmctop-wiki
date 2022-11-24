@@ -1,0 +1,10 @@
+
+# Generating Explain data
+
+  * The user ID you specify for dmctop to use must have sufficient privileges to
+    create new or reuse existing Explain tables in the monitored database.
+
+  * dmctop depends on some external DB2 utilities to format Explain data, such
+    as db2exfmt.  The environment where dmctop was started must be setup such
+    that dmctop can find and run these utilities or else attempts to generate
+    Explain data for a SQL statement will fail.
